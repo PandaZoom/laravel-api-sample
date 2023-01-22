@@ -1,0 +1,29 @@
+{
+    "name": "panda-zoom/laravel-article-log",
+    "description": "Article logs.",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "panda-zoom/laravel-article": "*",
+        "panda-zoom/laravel-user": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelArticleLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelArticleLog\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

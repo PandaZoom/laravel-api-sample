@@ -1,0 +1,28 @@
+{
+    "name": "panda-zoom/laravel-category",
+    "description": "The category package",
+    "keywords": [
+        "Laravel",
+        "category"
+    ],
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.1",
+        "astrotomic/laravel-translatable": "^11.9",
+        "panda-zoom/laravel-base": "*",
+        "panda-zoom/laravel-custom-rule": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelCategory\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelCategory\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

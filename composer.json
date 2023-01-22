@@ -1,0 +1,225 @@
+{
+    "name": "panda-zoom/laravel-api-sample",
+    "type": "project",
+    "description": "Simple API sample based on Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-base",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-custom-rule",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-email-rule",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-paginate",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-passport",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-passport-auth",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-user-locale",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-user-timezone",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-language",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-language-log",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-user",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-user-log",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-status",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-article",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-article-log",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-translate",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-comment",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-comment-log",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "packages/panda-zoom/laravel-category",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.5",
+        "laravel/framework": "^9.36",
+        "laravel/tinker": "^2.7",
+        "panda-zoom/laravel-base": "*",
+        "panda-zoom/laravel-custom-rule": "*",
+        "panda-zoom/laravel-email-rule": "*",
+        "panda-zoom/laravel-paginate": "*",
+        "panda-zoom/laravel-language": "*",
+        "panda-zoom/laravel-language-log": "*",
+        "panda-zoom/laravel-passport": "*",
+        "panda-zoom/laravel-passport-auth": "*",
+        "panda-zoom/laravel-user": "*",
+        "panda-zoom/laravel-user-log": "*",
+        "panda-zoom/laravel-user-locale": "*",
+        "panda-zoom/laravel-user-timezone": "*",
+        "panda-zoom/laravel-translate": "*",
+        "panda-zoom/laravel-status": "*",
+        "panda-zoom/laravel-article": "*",
+        "panda-zoom/laravel-article-log": "*",
+        "panda-zoom/laravel-comment": "*",
+        "panda-zoom/laravel-comment-log": "*",
+        "panda-zoom/laravel-category": "*"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.12",
+        "fakerphp/faker": "^1.20",
+        "laravel/pint": "^1.2",
+        "laravel/sail": "^1.16",
+        "mockery/mockery": "^1.5",
+        "nunomaduro/collision": "^6.3",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --nowrite"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

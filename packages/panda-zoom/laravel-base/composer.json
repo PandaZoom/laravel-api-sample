@@ -1,0 +1,38 @@
+{
+    "name": "panda-zoom/laravel-base",
+    "description": "Laravel entry package with base functionality.",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "lanin/laravel-api-debugger": "^4.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelBase\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --nowrite"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelBase\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

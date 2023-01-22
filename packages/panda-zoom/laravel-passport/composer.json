@@ -1,0 +1,28 @@
+{
+  "name": "panda-zoom/laravel-passport",
+  "description": "Auth functionality by laravel/passport",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Vlad Radchenko",
+      "email": "westen7ua@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "laravel/passport": "^10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PandaZoom\\LaravelPassport\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PandaZoom\\LaravelPassport\\Providers\\AppServiceProvider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<?php
+declare(strict_types=1);
+
+namespace PandaZoom\LaravelUser\Http\Resources;
+
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+class UserCollection extends ResourceCollection
+{
+    public static $wrap = 'users';
+
+    /**
+     * Transform the resource collection into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+     */
+    public function toArray($request)
+    {
+        return UserResource::collection($this->collection);
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "panda-zoom/laravel-translate",
+    "description": "Translate for laravel",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "astrotomic/laravel-translatable": "^11.10"
+    },
+    "suggest": {
+        "astrotomic/laravel-translatable": "Laravel ORM multi-language supporting"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelTranslate\\": "src/"
+        }
+    }
+}

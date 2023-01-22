@@ -1,0 +1,1422 @@
+[
+  {
+    "id": 1,
+    "locale": "af",
+    "name": "Afrikaans",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 2,
+    "locale": "sq",
+    "name": "Albanian - shqip",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 3,
+    "locale": "am",
+    "name": "Amharic - አማርኛ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 4,
+    "locale": "ar",
+    "name": "Arabic - العربية",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 5,
+    "locale": "an",
+    "name": "Aragonese - aragonés",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 6,
+    "locale": "hy",
+    "name": "Armenian - հայերեն",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 7,
+    "locale": "ast",
+    "name": "Asturian - asturianu",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 8,
+    "locale": "az",
+    "name": "Azerbaijani - azərbaycan dili",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 9,
+    "locale": "eu",
+    "name": "Basque - euskara",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 10,
+    "locale": "be",
+    "name": "Belarusian - беларуская",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 11,
+    "locale": "bn",
+    "name": "Bengali - বাংলা",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 12,
+    "locale": "bs",
+    "name": "Bosnian - bosanski",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 13,
+    "locale": "br",
+    "name": "Breton - brezhoneg",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 14,
+    "locale": "bg",
+    "name": "Bulgarian - български",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 15,
+    "locale": "ca",
+    "name": "Catalan - català",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 16,
+    "locale": "ckb",
+    "name": "Central Kurdish - کوردی (دەستنوسی عەرەبی)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 17,
+    "locale": "zh",
+    "name": "Chinese - 中文",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 18,
+    "locale": "zh-HK",
+    "name": "Chinese (Hong Kong) - 中文（香港）",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 19,
+    "locale": "zh-CN",
+    "name": "Chinese (Simplified) - 中文（简体）",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 20,
+    "locale": "zh-TW",
+    "name": "Chinese (Traditional) - 中文（繁體）",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 21,
+    "locale": "co",
+    "name": "Corsican",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 22,
+    "locale": "hr",
+    "name": "Croatian - hrvatski",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 23,
+    "locale": "cs",
+    "name": "Czech - čeština",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 24,
+    "locale": "da",
+    "name": "Danish - dansk",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 25,
+    "locale": "nl",
+    "name": "Dutch - Nederlands",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 26,
+    "locale": "en",
+    "name": "English",
+    "active": 1,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 27,
+    "locale": "en-AU",
+    "name": "English (Australia)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 28,
+    "locale": "en-CA",
+    "name": "English (Canada)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 29,
+    "locale": "en-IN",
+    "name": "English (India)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 30,
+    "locale": "en-NZ",
+    "name": "English (New Zealand)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 31,
+    "locale": "en-ZA",
+    "name": "English (South Africa)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 32,
+    "locale": "en-GB",
+    "name": "English (United Kingdom)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 33,
+    "locale": "en-US",
+    "name": "English (United States)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 34,
+    "locale": "eo",
+    "name": "Esperanto - esperanto",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 35,
+    "locale": "et",
+    "name": "Estonian - eesti",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 36,
+    "locale": "fo",
+    "name": "Faroese - føroyskt",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 37,
+    "locale": "fil",
+    "name": "Filipino",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 38,
+    "locale": "fi",
+    "name": "Finnish - suomi",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 39,
+    "locale": "fr",
+    "name": "French - français",
+    "active": 1,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 40,
+    "locale": "fr-CA",
+    "name": "French (Canada) - français (Canada)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 41,
+    "locale": "fr-FR",
+    "name": "French (France) - français (France)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 42,
+    "locale": "fr-CH",
+    "name": "French (Switzerland) - français (Suisse)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 43,
+    "locale": "gl",
+    "name": "Galician - galego",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 44,
+    "locale": "ka",
+    "name": "Georgian - ქართული",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 45,
+    "locale": "de",
+    "name": "German - Deutsch",
+    "active": 1,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 46,
+    "locale": "de-AT",
+    "name": "German (Austria) - Deutsch (Österreich)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 47,
+    "locale": "de-DE",
+    "name": "German (Germany) - Deutsch (Deutschland)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 48,
+    "locale": "de-LI",
+    "name": "German (Liechtenstein) - Deutsch (Liechtenstein)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 49,
+    "locale": "de-CH",
+    "name": "German (Switzerland) - Deutsch (Schweiz)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 50,
+    "locale": "el",
+    "name": "Greek - Ελληνικά",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 51,
+    "locale": "gn",
+    "name": "Guarani",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 52,
+    "locale": "gu",
+    "name": "Gujarati - ગુજરાતી",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 53,
+    "locale": "ha",
+    "name": "Hausa",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 54,
+    "locale": "haw",
+    "name": "Hawaiian - ʻŌlelo Hawaiʻi",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 55,
+    "locale": "he",
+    "name": "Hebrew - עברית",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 56,
+    "locale": "hi",
+    "name": "Hindi - हिन्दी",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 57,
+    "locale": "hu",
+    "name": "Hungarian - magyar",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 58,
+    "locale": "is",
+    "name": "Icelandic - íslenska",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 59,
+    "locale": "id",
+    "name": "Indonesian - Indonesia",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 60,
+    "locale": "ia",
+    "name": "Interlingua",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 61,
+    "locale": "ga",
+    "name": "Irish - Gaeilge",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 62,
+    "locale": "it",
+    "name": "Italian - italiano",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 63,
+    "locale": "it-IT",
+    "name": "Italian (Italy) - italiano (Italia)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 64,
+    "locale": "it-CH",
+    "name": "Italian (Switzerland) - italiano (Svizzera)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 65,
+    "locale": "ja",
+    "name": "Japanese - 日本語",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 66,
+    "locale": "kn",
+    "name": "Kannada - ಕನ್ನಡ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 67,
+    "locale": "kk",
+    "name": "Kazakh - қазақ тілі",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 68,
+    "locale": "km",
+    "name": "Khmer - ខ្មែរ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 69,
+    "locale": "ko",
+    "name": "Korean - 한국어",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 70,
+    "locale": "ku",
+    "name": "Kurdish - Kurdî",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 71,
+    "locale": "ky",
+    "name": "Kyrgyz - кыргызча",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 72,
+    "locale": "lo",
+    "name": "Lao - ລາວ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 73,
+    "locale": "la",
+    "name": "Latin",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 74,
+    "locale": "lv",
+    "name": "Latvian - latviešu",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 75,
+    "locale": "ln",
+    "name": "Lingala - lingála",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 76,
+    "locale": "lt",
+    "name": "Lithuanian - lietuvių",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 77,
+    "locale": "mk",
+    "name": "Macedonian - македонски",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 78,
+    "locale": "ms",
+    "name": "Malay - Bahasa Melayu",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 79,
+    "locale": "ml",
+    "name": "Malayalam - മലയാളം",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 80,
+    "locale": "mt",
+    "name": "Maltese - Malti",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 81,
+    "locale": "mr",
+    "name": "Marathi - मराठी",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 82,
+    "locale": "mn",
+    "name": "Mongolian - монгол",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 83,
+    "locale": "ne",
+    "name": "Nepali - नेपाली",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 84,
+    "locale": "no",
+    "name": "Norwegian - norsk",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 85,
+    "locale": "nb",
+    "name": "Norwegian Bokmål - norsk bokmål",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 86,
+    "locale": "nn",
+    "name": "Norwegian Nynorsk - nynorsk",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 87,
+    "locale": "oc",
+    "name": "Occitan",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 88,
+    "locale": "or",
+    "name": "Oriya - ଓଡ଼ିଆ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 89,
+    "locale": "om",
+    "name": "Oromo - Oromoo",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 90,
+    "locale": "ps",
+    "name": "Pashto - پښتو",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 91,
+    "locale": "fa",
+    "name": "Persian - فارسی",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 92,
+    "locale": "pl",
+    "name": "Polish - polski",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 93,
+    "locale": "pt",
+    "name": "Portuguese - português",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 94,
+    "locale": "pt-BR",
+    "name": "Portuguese (Brazil) - português (Brasil)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 95,
+    "locale": "pt-PT",
+    "name": "Portuguese (Portugal) - português (Portugal)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 96,
+    "locale": "pa",
+    "name": "Punjabi - ਪੰਜਾਬੀ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 97,
+    "locale": "qu",
+    "name": "Quechua",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 98,
+    "locale": "ro",
+    "name": "Romanian - română",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 99,
+    "locale": "mo",
+    "name": "Romanian (Moldova) - română (Moldova)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 100,
+    "locale": "rm",
+    "name": "Romansh - rumantsch",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 101,
+    "locale": "ru",
+    "name": "Russian - русский",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 102,
+    "locale": "gd",
+    "name": "Scottish Gaelic",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 103,
+    "locale": "sr",
+    "name": "Serbian - српски",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 104,
+    "locale": "sh",
+    "name": "Serbo-Croatian - Srpskohrvatski",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 105,
+    "locale": "sn",
+    "name": "Shona - chiShona",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 106,
+    "locale": "sd",
+    "name": "Sindhi",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 107,
+    "locale": "si",
+    "name": "Sinhala - සිංහල",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 108,
+    "locale": "sk",
+    "name": "Slovak - slovenčina",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 109,
+    "locale": "sl",
+    "name": "Slovenian - slovenščina",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 110,
+    "locale": "so",
+    "name": "Somali - Soomaali",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 111,
+    "locale": "st",
+    "name": "Southern Sotho",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 112,
+    "locale": "es",
+    "name": "Spanish - español",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 113,
+    "locale": "es-AR",
+    "name": "Spanish (Argentina) - español (Argentina)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 114,
+    "locale": "es-419",
+    "name": "Spanish (Latin America) - español (Latinoamérica)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 115,
+    "locale": "es-MX",
+    "name": "Spanish (Mexico) - español (México)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 116,
+    "locale": "es-ES",
+    "name": "Spanish (Spain) - español (España)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 117,
+    "locale": "es-US",
+    "name": "Spanish (United States) - español (Estados Unidos)",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 118,
+    "locale": "su",
+    "name": "Sundanese",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 119,
+    "locale": "sw",
+    "name": "Swahili - Kiswahili",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 120,
+    "locale": "sv",
+    "name": "Swedish - svenska",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 121,
+    "locale": "tg",
+    "name": "Tajik - тоҷикӣ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 122,
+    "locale": "ta",
+    "name": "Tamil - தமிழ்",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 123,
+    "locale": "tt",
+    "name": "Tatar",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 124,
+    "locale": "te",
+    "name": "Telugu - తెలుగు",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 125,
+    "locale": "th",
+    "name": "Thai - ไทย",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 126,
+    "locale": "ti",
+    "name": "Tigrinya - ትግርኛ",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 127,
+    "locale": "to",
+    "name": "Tongan - lea fakatonga",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 128,
+    "locale": "tr",
+    "name": "Turkish - Türkçe",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 129,
+    "locale": "tk",
+    "name": "Turkmen",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 130,
+    "locale": "tw",
+    "name": "Twi",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 131,
+    "locale": "uk",
+    "name": "Ukrainian - українська",
+    "active": 1,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 132,
+    "locale": "ur",
+    "name": "Urdu - اردو",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 133,
+    "locale": "ug",
+    "name": "Uyghur",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 134,
+    "locale": "uz",
+    "name": "Uzbek - o‘zbek",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 135,
+    "locale": "vi",
+    "name": "Vietnamese - Tiếng Việt",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 136,
+    "locale": "wa",
+    "name": "Walloon - wa",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 137,
+    "locale": "cy",
+    "name": "Welsh - Cymraeg",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 138,
+    "locale": "fy",
+    "name": "Western Frisian",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 139,
+    "locale": "xh",
+    "name": "Xhosa",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 140,
+    "locale": "yi",
+    "name": "Yiddish",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 141,
+    "locale": "yo",
+    "name": "Yoruba - Èdè Yorùbá",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  },
+  {
+    "id": 142,
+    "locale": "zu",
+    "name": "Zulu - isiZulu",
+    "active": 0,
+    "position": 0,
+    "created_at": null,
+    "updated_at": null,
+    "deleted_at": null
+  }
+]

@@ -1,0 +1,37 @@
+{
+    "name": "panda-zoom/laravel-user-timezone",
+    "description": "Laravel timezone functionality.",
+    "keywords": [
+        "Laravel",
+        "timezone"
+    ],
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "panda-zoom/laravel-custom-rule": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelUserTimezone\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PandaZoom\\LaravelUserTimezoneTests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelUserTimezone\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

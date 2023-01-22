@@ -1,0 +1,2580 @@
+{
+	"info": {
+		"_postman_id": "2f397bd1-9ac8-4482-bdaf-9e8bf4329af1",
+		"name": "1. Localhost Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5857013"
+	},
+	"item": [
+		{
+			"name": "Entry Page",
+			"item": [
+				{
+					"name": "Entry Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUri}}/",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register / Logout",
+			"item": [
+				{
+					"name": "api.register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "{{userPassword}}",
+									"description": "[required]",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "222{{userEmail}}",
+									"description": "[required]",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Alex",
+									"description": "[required]",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Westen",
+									"description": "[optional]",
+									"type": "text"
+								},
+								{
+									"key": "locale",
+									"value": "de",
+									"description": "[optional] Supported only: de, fr, en",
+									"type": "text"
+								},
+								{
+									"key": "timezone",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/register",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/logout",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check Email",
+			"item": [
+				{
+					"name": "api.user_email.is_exists",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{userEmail}}",
+									"description": "case when email exist at database",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "another.{{userEmail}}",
+									"description": "case when email doesnt exist at database",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/user-emails/exists",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"user-emails",
+								"exists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Passport",
+			"item": [
+				{
+					"name": "api.passport.token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{userEmail}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{userPassword}}",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{passportGrantClientId}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{passportGrantClientSecret}}",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/oauth/token",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.passport.refresh_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{passportGrantClientId}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{passportGrantClientSecret}}",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "{{refreshToken}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/oauth/token",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "api.users.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users?with=language,articles&include=language,articles&active=1",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "language,articles"
+								},
+								{
+									"key": "include",
+									"value": "language,articles"
+								},
+								{
+									"key": "filter",
+									"value": "id,firstName,name,locale",
+									"disabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "Alex",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "Montana",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "1"
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "on",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "off",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "no",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id?with=language,articles&include=language,articles&filter=id,firstName,locale,name,title,description,summary",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "language,articles"
+								},
+								{
+									"key": "include",
+									"value": "language,articles"
+								},
+								{
+									"key": "filter",
+									"value": "id,firstName,locale,name,title,description,summary"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "101"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id?firstName=Alex-00&lastName=Montana-00&locale=de",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Alex-00"
+								},
+								{
+									"key": "lastName",
+									"value": "Montana-00"
+								},
+								{
+									"key": "locale",
+									"value": "de"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "102"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id?firstName=John-11&lastName=Doe-22",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "John-11"
+								},
+								{
+									"key": "lastName",
+									"value": "Doe-22"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "107"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id/restore",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "107"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "107"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.permanent_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/users/:id/delete",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "107"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile / Auth User",
+			"item": [
+				{
+					"name": "api.profile.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/profile?with=language&include=language&filter=id,firstName,lastName",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "language"
+								},
+								{
+									"key": "include",
+									"value": "language"
+								},
+								{
+									"key": "filter",
+									"value": "id,firstName,lastName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.profile.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/profile?firstName=Tony2&lastName=Montana3",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Tony2"
+								},
+								{
+									"key": "lastName",
+									"value": "Montana3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/profile?locale=fr",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "fr"
+								},
+								{
+									"key": "locale",
+									"value": "de",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.users.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/profile",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Languages",
+			"item": [
+				{
+					"name": "api.languages.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/languages",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"languages"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "no",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "on",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "off",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "locale",
+									"value": "zh-hk",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.languages.patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/languages/:id?active=false",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"languages",
+								":id"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "no",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "on",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "off",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "false"
+								},
+								{
+									"key": "locale",
+									"value": "zh-hk",
+									"disabled": true
+								},
+								{
+									"key": "locale",
+									"value": "en-CA",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "api.categories.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "de",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "uk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id,name",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "draft",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "published",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "suspend",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "archived",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id,name",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "include",
+									"value": "translations",
+									"type": "text"
+								},
+								{
+									"key": "with",
+									"value": "translations",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][locale]",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][name]",
+									"value": "Name EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[de][locale]",
+									"value": "de",
+									"type": "text"
+								},
+								{
+									"key": "translations[de][name]",
+									"value": "DE name",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/categories?include=translations,user&with=user",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "translations,user"
+								},
+								{
+									"key": "with",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories/:id?active=1&position=7&translations[en][locale]=en&translations[en][name]=Name EN&include=translations",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "1"
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "position",
+									"value": "7"
+								},
+								{
+									"key": "translations[en][locale]",
+									"value": "en"
+								},
+								{
+									"key": "translations[en][name]",
+									"value": "Name EN"
+								},
+								{
+									"key": "include",
+									"value": "translations"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories/:id?active=1",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "1"
+								},
+								{
+									"key": "active",
+									"value": "yes",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "false",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories/:id/restore",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.categories.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/categories/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statuses",
+			"item": [
+				{
+					"name": "api.statuses.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "de",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "uk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/statuses?filter=id,slug",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id,slug"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.statuses.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/statuses/:id?filter=id,slug",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses",
+								":id"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id,slug"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.statuses.store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/statuses",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "with",
+									"value": "user",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.statuses.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/statuses/:id?include=user&slug=archived",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses",
+								":id"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "user"
+								},
+								{
+									"key": "slug",
+									"value": "archived"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.statuses.restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/statuses/:id/restore",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.statuses.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/statuses/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"statuses",
+								":id"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "api.articles.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "de",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "uk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles?with=user,categories",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "user,categories"
+								},
+								{
+									"key": "include",
+									"value": "user,categories",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "id,name,status",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "draft",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "published",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "suspend",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "archived",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id?with=user,categories,comments&include=user,categories,comments&filter=id,name,status",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "user,categories,comments"
+								},
+								{
+									"key": "include",
+									"value": "user,categories,comments"
+								},
+								{
+									"key": "filter",
+									"value": "id,name,status"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "statusId",
+									"value": "2",
+									"description": "Published",
+									"type": "text"
+								},
+								{
+									"key": "categoryId[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categoryId[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][locale]",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][title]",
+									"value": "Title EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][name]",
+									"value": "Name EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][description]",
+									"value": "Description EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][summary]",
+									"value": "Summary EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[en][story]",
+									"value": "Story EN",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][locale]",
+									"value": "fr",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][title]",
+									"value": "Title FR",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][name]",
+									"value": "Name FR",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][description]",
+									"value": "Description FR",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][summary]",
+									"value": "Summary FR",
+									"type": "text"
+								},
+								{
+									"key": "translations[fr][story]",
+									"value": "Story FR",
+									"type": "text"
+								},
+								{
+									"key": "translations[de][locale]",
+									"value": "de",
+									"type": "text"
+								},
+								{
+									"key": "translations[de][title]",
+									"value": "Title DE",
+									"type": "text"
+								},
+								{
+									"key": "translations[de][name]",
+									"value": "Name DE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/articles?include=translations,user,categories&with=user,categories",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "translations,user,categories"
+								},
+								{
+									"key": "with",
+									"value": "user,categories"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id?include=translations,user,categories&statusId=1&categoryId[]=3&categoryId[]=5&translations[en][locale]=en&translations[en][title]=Title EN&translations[en][name]=Name EN&translations[en][description]=Description EN&translations[en][summary]=Summary EN&translations[en][story]=Story EN&translations[fr][locale]=fr&translations[fr][title]=Title FR&translations[fr][name]=Name FR&translations[fr][description]=Description FR&translations[fr][summary]=Summary FR&translations[fr][story]=Story FR&translations[de][locale]=de&translations[de][title]=Title DE&translations[de][name]=Name DE",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "translations,user,categories"
+								},
+								{
+									"key": "with",
+									"value": "translations,user,categories",
+									"disabled": true
+								},
+								{
+									"key": "statusId",
+									"value": "1",
+									"description": "Draft"
+								},
+								{
+									"key": "statusId",
+									"value": "3",
+									"description": "Suspended",
+									"disabled": true
+								},
+								{
+									"key": "statusId",
+									"value": "published",
+									"description": "Published",
+									"disabled": true
+								},
+								{
+									"key": "categoryId[]",
+									"value": "3"
+								},
+								{
+									"key": "categoryId[]",
+									"value": "5"
+								},
+								{
+									"key": "translations[en][locale]",
+									"value": "en"
+								},
+								{
+									"key": "translations[en][title]",
+									"value": "Title EN"
+								},
+								{
+									"key": "translations[en][name]",
+									"value": "Name EN"
+								},
+								{
+									"key": "translations[en][description]",
+									"value": "Description EN"
+								},
+								{
+									"key": "translations[en][summary]",
+									"value": "Summary EN"
+								},
+								{
+									"key": "translations[en][story]",
+									"value": "Story EN"
+								},
+								{
+									"key": "translations[fr][locale]",
+									"value": "fr"
+								},
+								{
+									"key": "translations[fr][title]",
+									"value": "Title FR"
+								},
+								{
+									"key": "translations[fr][name]",
+									"value": "Name FR"
+								},
+								{
+									"key": "translations[fr][description]",
+									"value": "Description FR"
+								},
+								{
+									"key": "translations[fr][summary]",
+									"value": "Summary FR"
+								},
+								{
+									"key": "translations[fr][story]",
+									"value": "Story FR"
+								},
+								{
+									"key": "translations[de][locale]",
+									"value": "de"
+								},
+								{
+									"key": "translations[de][title]",
+									"value": "Title DE"
+								},
+								{
+									"key": "translations[de][name]",
+									"value": "Name DE"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id?statusId=3",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id"
+							],
+							"query": [
+								{
+									"key": "statusId",
+									"value": "1",
+									"description": "Draft",
+									"disabled": true
+								},
+								{
+									"key": "statusId",
+									"value": "3",
+									"description": "Suspended"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"description": "Published",
+									"disabled": true
+								},
+								{
+									"key": "categoryId[]",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "categoryId[]",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "with",
+									"value": "categories",
+									"disabled": true
+								},
+								{
+									"key": "include",
+									"value": "categories",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id/restore",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.permanent_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id/delete",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles / Comments",
+			"item": [
+				{
+					"name": "api.articles.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "de",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "uk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id/comments?with=user&include=user",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "user"
+								},
+								{
+									"key": "include",
+									"value": "user"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.articles.comments.store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "some article message",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUri}}/api/articles/:id/comments?include=user&with=user",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "user"
+								},
+								{
+									"key": "with",
+									"value": "user"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "api.comments.index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "de",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Language",
+								"value": "uk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/articles?with=user&include=user",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "user"
+								},
+								{
+									"key": "include",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.comments.show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/comments/:id?with=user&include=user",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "user"
+								},
+								{
+									"key": "include",
+									"value": "user"
+								},
+								{
+									"key": "filter",
+									"value": "id,name,status",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.comments.update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/comments/:id?message=Updated Message 52-00",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id"
+							],
+							"query": [
+								{
+									"key": "message",
+									"value": "Updated Message 52-00"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.comments.restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/comments/:id/restore",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.comments.destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/comments/:id",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api.comments.permanent_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "[Required] for every endpoint"
+							}
+						],
+						"url": {
+							"raw": "{{baseUri}}/api/comments/:id/delete",
+							"host": [
+								"{{baseUri}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

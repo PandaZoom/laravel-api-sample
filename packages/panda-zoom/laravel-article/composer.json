@@ -1,0 +1,29 @@
+{
+    "name": "panda-zoom/laravel-article",
+    "description": "Articles.",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "panda-zoom/laravel-base": "*",
+        "panda-zoom/laravel-custom-rule": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelArticle\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelArticle\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

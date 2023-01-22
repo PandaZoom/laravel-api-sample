@@ -1,0 +1,29 @@
+{
+    "name": "panda-zoom/laravel-comment",
+    "description": "Comments.",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vlad Radchenko",
+            "email": "westen7ua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "panda-zoom/laravel-base": "*",
+        "panda-zoom/laravel-custom-rule": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandaZoom\\LaravelComment\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PandaZoom\\LaravelComment\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}
